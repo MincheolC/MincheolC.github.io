@@ -1,19 +1,20 @@
 # main links
 main:
-  - title: "About Me"
+  - title: "Me"
     url: /about-me
-  - title: "Posts"
-    url: /posts
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
-# post-nav:
-#   - title: Getting Started
-#     children:
-#       - title: "Quick-Start Guide"
-#         url: /posts/quick-start-guide/
-#       - title: "Structure"
-#         url: /posts/structure/
+
+categories:
+  - title: categories
+    children:
+      - title: "javascript"
+        url: /javascript
+      - title: "react"
+        url: /categories/react/
+      - title: "database"
+        url: /categories/database/
+      - title: "aws"
+        url: /categories/aws/
+      - title: "experience"
+        url: /categories/experience/
+      - title: "study"
+        url: /categories/study/

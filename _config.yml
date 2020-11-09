@@ -12,13 +12,13 @@
 
 theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "dark" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "neon" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "ko-KR"
 title                    : "Dev Logs"
 title_separator          : "-"
-subtitle                 : "운동을 좋아하는 개발자" # site tagline that appears below site title in masthead
+subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Mincheol Cha"
 description              : "나만의 기술 블로그"
 url                      : "https://mincheolc.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -274,11 +274,17 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
-      read_time: true
+      author_profile: false
+      read_time: false
       comments: # true
       share: true
-      related: true
       show_date: true
-      # sidebar:
-      #   nav: post-nav
+      sidebar:
+        nav: categories
+  - scope:
+      path: ""
+      type: pages
+    values:
+      author_profile: false
+      sidebar:
+        nav: categories

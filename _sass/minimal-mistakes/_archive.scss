@@ -59,6 +59,10 @@
     bottom: 0;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   a + a {
     opacity: 0.5;
   }
