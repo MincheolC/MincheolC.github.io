@@ -1,20 +1,22 @@
 # main links
 main:
-  - title: "Me"
+  - title: 'Me'
     url: /about-me
 
 categories:
   - title: categories
     children:
-      - title: "javascript"
+      - title: 'javascript'
         url: /javascript
-      - title: "react"
+      - title: 'typescript'
+        url: /typescript
+      - title: 'react'
         url: /categories/react/
-      - title: "database"
+      - title: 'database'
         url: /categories/database/
-      - title: "aws"
+      - title: 'aws'
         url: /categories/aws/
-      - title: "experience"
+      - title: 'experience'
         url: /categories/experience/
-      - title: "study"
+      - title: 'study'
         url: /categories/study/
