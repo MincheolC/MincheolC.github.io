@@ -12,6 +12,8 @@ categories:
         url: /typescript
       - title: 'react'
         url: /categories/react/
+      - title: 'os'
+        url: /os/
       - title: 'database'
         url: /categories/database/
       - title: 'aws'
