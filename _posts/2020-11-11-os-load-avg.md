@@ -1,5 +1,5 @@
 ---
-title: '[OS] Load Average'
+title: 'O.S Load Average'
 excerpt: '유닉스 기반 OS가 부하를 나타내기 위해 사용하는 수치(평균치)이다. '
 categories:
   - os

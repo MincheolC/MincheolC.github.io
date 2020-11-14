@@ -1,5 +1,5 @@
 ---
-title: '[TS] Basic Types'
+title: 'Typescript Basic Types'
 excerpt: 'Typescript에서 사용되는 기본 타입들'
 categories:
   - typescript

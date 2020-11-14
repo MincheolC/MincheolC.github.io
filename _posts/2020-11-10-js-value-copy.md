@@ -1,6 +1,6 @@
 ---
-title: '[JS] 원시값에서 메소드를 사용할 수 있는 이유와 객체 복사'
-excerpt: 'JS에는 undefined와 null을 제와하고 원시 래퍼 객체가 존재하는데, 원시값에 메소드를 호출하면 JS가 자동적으로 아래의 원시 래퍼 객체로 boxing해서...'
+title: 'JS 원시값에서 메소드를 사용할 수 있는 이유와 객체 복사'
+excerpt: 'javascript에는 undefined와 null을 제와하고 원시 래퍼 객체가 존재하는데, 원시값에 메소드를 호출하면 JS가 자동적으로 아래의 원시 래퍼 객체로 boxing해서...'
 categories:
   - javascript
 ---
