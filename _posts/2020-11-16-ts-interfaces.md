@@ -10,7 +10,7 @@ toc: true
 
 ## Interfaces
 
-Typescript의 핵심 원칙 중 하나는 type checking이 값의 모형(shape)에 초점을 맞춘다는 것이다. 이를 `Duck typing` or `structural subtyping` 이라고도 한다. Typecript의 Interfaces는 **type들의 이름을 지정하는 역할**을 수행함. **코드 내외로 약속(contract)을 정의**하는 강력한 방법이다.
+Typescript의 핵심 원칙 중 하나는 type checking이 값의 모형(shape)에 초점을 맞춘다는 것이다. 이를 `Duck typing` or `structural subtyping` 이라고도 한다. Typescript의 Interfaces는 **type들의 이름을 지정하는 역할**을 수행함. **코드 내외로 약속(contract)을 정의**하는 강력한 방법이다.
 
 ```tsx
 interface LabeledValue {
@@ -19,11 +19,11 @@ interface LabeledValue {
 
 function printLabel(labeledObj: LabeledValue) {
   console.log(labeledObj.label);
-  // console.log(labeledObj.size); // compile ERROR
+  console.log(labeledObj.size); // compile ERROR
 }
 
-const obj = { a: 1, label: 'One' };
-printLabel(obj); // One
+const obj = { size: 1, label: 'One' };
+printLabel(obj);
 ```
 
 Type-checker는 함수로 전달된 객체에서 실제로는 더 많은 property가 있을 수 있지만 **필요한(required) 값만 type-checking을 하고 allow한다**.
@@ -32,12 +32,12 @@ Type-checker는 함수로 전달된 객체에서 실제로는 더 많은 propert
 
 Interface의 모든 property가 필수(required)일 필요는 없다. `Optional Properties`**는 'options bags'와 같은 패턴(몇 가지 프로퍼티만 채운 객체를 함수에 넘기는 방법)을 만들 때 많이 사용 된다**.
 
-Optional Properties는 Interface의 property를 선언 시 끝에 `?`만 붙여 주면 된다.
+Optional Properties는 Interface의 property 선언 시 끝에 `?`만 붙여 주면 된다.
 
 ```tsx
 interface SquareConfig {
-  color?: string; // <--
-  width?: number; // <--
+  color?: string; // <-- optional property
+  width?: number; // <-- optional property
 }
 
 function createSquare(config: SquareConfig): { color: string; area: number } {
@@ -50,7 +50,7 @@ function createSquare(config: SquareConfig): { color: string; area: number } {
   }
   return newSquare;
 }
-let mySquare = createSquare({ color: 'black' });
+let mySquare = createSquare({ color: 'black' }); // <-- width는 없음 (객체 리터럴)
 ```
 
 ### Readonly properties
@@ -59,8 +59,8 @@ let mySquare = createSquare({ color: 'black' });
 
 ```tsx
 interface Point {
-  readonly x: number;
-  readonly y: number;
+  readonly x: number; // <--
+  readonly y: number; // <--
 }
 
 let p1: Point = { x: 10, y: 20 };
@@ -72,7 +72,7 @@ p1.x = 5; // ERROR!
 ```tsx
 const a: number[] = [1, 2, 3, 4];
 let b: number[];
-const ro: ReadonlyArray<number> = a;
+const ro: ReadonlyArray<number> = a; // <--
 
 a[1] = 3; // Error
 b = ro; // Error, The type 'readonly number[]' is 'readonly' and cannot be assigned to the mutable type 'number[]'.
@@ -129,15 +129,16 @@ interface FtName {
 }
 ```
 
-Function types을 정의한 뒤에, 다른 인터페이스처럼 사용할 수 있음. 또한 파라미터 이름이 Function Type에 정의된 것과 일치할 필요는 없다.
+Function types을 정의한 뒤에, 다른 인터페이스처럼 사용할 수 있다. 또한 파라미터 이름이 Function types에 정의된 것과 일치할 필요는 없다.
 
 ```tsx
 interface SearchFunc {
-  (source: string, subString: string): boolean;
+  (source: string, subString: string): boolean; // <--
 }
 
 let mySearch: SearchFunc;
 
+// 파라미터 이름 다름
 mySearch = function (src: string, sub: string): boolean {
   let result = src.search(sub);
   return result > -1;
@@ -149,6 +150,7 @@ mySearch = function (src: string, sub: string): boolean {
 ```tsx
 let mySearch: SearchFunc;
 
+// 파라미터 타입 지정 안 함
 mySearch = function (src, sub) {
   let result = src.search(sub);
   return result > -1;
@@ -176,7 +178,7 @@ myItems = ['Bob', 'Fred'];
 let myStr: string = myItems[0];
 ```
 
-Indexing 결과의 반환 타입으로 유니온 쓰기
+Indexing 결과의 반환 타입으로 유니온 사용하면 여러 타입 반환 가능
 
 ```tsx
 interface Items {
@@ -191,7 +193,7 @@ console.log(myItems[2]);   // true
 console.log(myItems[3]);   // [1,2,3]
 ```
 
-Index signature은 `number`와 `string` 타입을 지원한다. **두 타입의 인덱서를 모두 지원할 수 있지만 숫자 인덱서에서 반환 된 타입은 문자열 인덱서에서 반환된 타입의 하위 타입이어야 한다**. (`number`로 인덱싱 하는 경우, javascript가 인덱싱 전에 `string`으로 변환하기 때문이다;`100`으로 인덱싱 = `"100"`으로 인덱싱)
+Index signature은 `number`와 `string` 타입을 지원한다. **두 타입의 인덱서를 모두 지원할 수 있지만 숫자 인덱서에서 반환 된 타입은 문자열 인덱서에서 반환된 타입의 하위 타입이어야 한다**. (`number`로 인덱싱 하는 경우, javascript가 인덱싱 전에 `string`으로 변환하기 때문이다; ex) `a[100] = a["100"]`)
 
 ```tsx
 // 상위 타입
@@ -205,13 +207,13 @@ interface Dog extends Animal {
 }
 
 interface NotOkay {
-  [x: number]: Animal; // 숫자 인덱스 형식 Animal을 문자 인덱스 형식 Dog에 할당할 수 없음.
+  [x: number]: Animal; // ERROR; 숫자 인덱스 형식 Animal을 문자 인덱스 형식 Dog에 할당할 수 없음.
   [x: string]: Dog;
 }
 
 interface Okay {
-  [x: number]: Dog;
-  [x: string]: Animal;
+  [x: number]: Dog; // 숫자 인덱서에서 반환 된 타입 (Dog) (하위)
+  [x: string]: Animal; // 문자열 인덱서에서 반환 된 타입 (Animal) (상위)
 }
 ```
 
@@ -264,11 +266,11 @@ class Clock implements ClockInterface {
 }
 ```
 
-Interface는 class의 public 측면만을 설명함으로써, 클래스의 private한 특정 타입 부분을 확인하는 것을 금지한다.
+**Interface는 class의 public 측면만을 설명**함으로써, 클래스의 private한 특정 타입 부분을 확인하는 것을 금지한다.
 
 **Class의 static과 instance의 차이점**
 
-Class와 Interface로 작업할 때는, class에는 static 타입과 instance 타입이 있다는 것을 명심해라. Contruct signature를 이용해서 interface를 만든 뒤 이 interface를 구현하는 class를 만들려고 하면 오류가 발생한다.
+Class와 Interface로 작업할 때는, class에는 static 타입과 instance 타입이 있다는 것을 명심해야 한다. Contruct signature를 이용해서 interface를 만든 뒤 이 interface를 구현하는 class를 만들려고 하면 오류가 발생한다.
 
 ```tsx
 interface ClockConstructor {
@@ -313,7 +315,6 @@ class AnalogClock implements ClockInterface {
 
 let digital = createClock(DigitalClock, 12, 17);
 let analog = createClock(AnalogClock, 7, 32);
-Try;
 ```
 
 좀 더 간단한 방법은 다음과 같다.
@@ -391,3 +392,4 @@ class ImageControl implements SelectableControl {
 ## References
 
 - [Typescript Handbook Interfaces](https://www.typescriptlang.org/docs/handbook/interfaces.html)
+- [HEROPY Tech](https://heropy.blog/2020/01/27/typescript/)
