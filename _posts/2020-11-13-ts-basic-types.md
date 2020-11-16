@@ -172,6 +172,6 @@ let lenBracket: number = (<string>someValue).length;
 
 **lowercase만 타입으로 사용할 것.** `Number, String, Boolean, Symbol, Object` 은 원시타입을 참조하지 않기 떄문에 유형으로 사용해서는 안 됨.
 
-### References
+## References
 
 - [Typescript Handbook Basic Types](https://www.typescriptlang.org/docs/handbook/basic-types.html)
