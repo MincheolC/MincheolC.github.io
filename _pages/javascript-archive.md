@@ -1,4 +1,4 @@
 ---
 layout: categories
-permalink: /javascript/
+permalink: categories/javascript/
 ---

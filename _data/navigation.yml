@@ -7,7 +7,7 @@ categories:
   - title: categories
     children:
       - title: 'javascript'
-        url: /javascript
+        url: /categories/javascript/
       - title: 'typescript'
         url: /typescript
       - title: 'react'
