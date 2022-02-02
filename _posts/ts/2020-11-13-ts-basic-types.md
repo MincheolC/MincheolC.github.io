@@ -3,7 +3,16 @@ title: 'Typescript Basic Types'
 excerpt: 'Typescript에서 사용되는 기본 타입들'
 categories:
   - typescript
+  
+tags: [ts, typescript, basic types]
+author_profile: true
+
 toc: true
+toc_label: "목록"
+toc_icon: "bars"
+toc_sticky: true
+
+date: 2020-11-13
 ---
 
 ## Basic Types

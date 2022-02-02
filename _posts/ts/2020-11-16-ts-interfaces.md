@@ -3,7 +3,16 @@ title: 'Typescript Interfaces'
 excerpt: 'Typescript 공식 handbook의 Interface를 정리한 글'
 categories:
   - typescript
+
+tags: [ts, typescript, interface]
+author_profile: true
+
 toc: true
+toc_label: "목록"
+toc_icon: "bars"
+toc_sticky: true
+
+date: 2020-11-16
 ---
 
 이 글은 Typescript 공식 Handbook에서 Interfaces 편을 정리 한 글입니다.

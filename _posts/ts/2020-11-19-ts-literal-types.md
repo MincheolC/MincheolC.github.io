@@ -3,7 +3,16 @@ title: 'Typescript Literal Types'
 excerpt: 'Typescript 공식 handbook의 Literal Types를 정리한 글'
 categories:
   - typescript
+
+tags: [ts, typescript, literal types]
+author_profile: true
+
 toc: true
+toc_label: "목록"
+toc_icon: "bars"
+toc_sticky: true
+
+date: 2020-11-19
 ---
 
 이 글은 Typescript 공식 Handbook에서 Literal Types 편을 정리 한 글입니다.

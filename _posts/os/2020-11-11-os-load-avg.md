@@ -3,6 +3,15 @@ title: 'O.S Load Average'
 excerpt: '유닉스 기반 OS가 부하를 나타내기 위해 사용하는 수치(평균치)이다. '
 categories:
   - os
+tags: [os, load average, performance]
+author_profile: true
+
+toc: true
+toc_label: "목록"
+toc_icon: "bars"
+toc_sticky: true
+
+date: 2020-11-11
 ---
 
 유닉스 기반 OS가 부하를 나타내기 위해 사용하는 수치(평균치)이다.

@@ -3,6 +3,15 @@ title: 'JS 원시값에서 메소드를 사용할 수 있는 이유와 객체 �
 excerpt: 'javascript에는 undefined와 null을 제와하고 원시 래퍼 객체가 존재하는데, 원시값에 메소드를 호출하면 JS가 자동적으로 아래의 원시 래퍼 객체로 boxing해서...'
 categories:
   - javascript
+tags: [object copy, javascript]
+author_profile: true
+
+toc: true
+toc_label: "목록"
+toc_icon: "bars"
+toc_sticky: true
+
+date: 2020-11-10
 ---
 
 Javascript의 데이터 타입(Data type)은 원시 자료형(Primitives)과 객체(Object)로 나뉨.

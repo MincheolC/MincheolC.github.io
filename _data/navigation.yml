@@ -1,24 +1,43 @@
 # main links
 main:
   - title: 'Me'
-    url: /about-me
 
 categories:
-  - title: categories
+  - title: Language
     children:
+      - title: 'clojure'
+        url: clojure/
+        category: 'clojure'
       - title: 'javascript'
-        url: /categories/javascript/
+        url: javascript/
+        category: 'javascript'
       - title: 'typescript'
-        url: /typescript
-      - title: 'react'
-        url: /categories/react/
-      - title: 'os'
-        url: /os/
-      - title: 'database'
-        url: /categories/database/
+        url: typescript/
+        category: 'typescript'
+  - title: Dev
+    children:
       - title: 'aws'
-        url: /categories/aws/
+        url: aws/
+        category: 'aws'
       - title: 'experience'
-        url: /categories/experience/
-      - title: 'study'
-        url: /study/
+        url: experience/
+        category: 'experience'
+  - title: CSE
+    children:
+      - title: 'os'
+        url: os/
+        category: 'os'
+      - title: 'database'
+        url: database/
+        category: 'database'
+  - title: Etc
+    children:
+      - title: 'Book'
+        url: book/
+        category: 'book'
+      - title: 'Life'
+        url: life/
+        category: 'life'
+      - title: 'Investment'
+        url: investment/
+        category: 'investment'

@@ -3,7 +3,16 @@ title: 'Typescript Functions'
 excerpt: 'Typescript 공식 handbook의 Functions를 정리한 글'
 categories:
   - typescript
+
+tags: [ts, typescript, function]
+author_profile: true
+
 toc: true
+toc_label: "목록"
+toc_icon: "bars"
+toc_sticky: true
+
+date: 2020-11-17
 ---
 
 이 글은 Typescript 공식 Handbook에서 Functions 편을 정리 한 글입니다.
