@@ -9,10 +9,10 @@ categories:
         url: clojure
         category: 'clojure'
       - title: 'javascript'
-        url: javascript.html
+        url: javascript
         category: 'javascript'
       - title: 'typescript'
-        url: /typescript/
+        url: typescript
         category: 'typescript'
   - title: Dev
     children:
