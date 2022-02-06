@@ -277,7 +277,7 @@ defaults:
       sidebar:
         nav: categories
   - scope:
-      path: '/categories'
+      path: ''
       type: pages
     values:
       author_profile: true
