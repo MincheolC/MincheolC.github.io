@@ -6,38 +6,38 @@ categories:
   - title: Language
     children:
       - title: 'clojure'
-        url: clojure/
+        url: clojure
         category: 'clojure'
       - title: 'javascript'
-        url: javascript/
+        url: javascript.html
         category: 'javascript'
       - title: 'typescript'
-        url: typescript/
+        url: /typescript/
         category: 'typescript'
   - title: Dev
     children:
       - title: 'aws'
-        url: aws/
+        url: aws
         category: 'aws'
       - title: 'experience'
-        url: experience/
+        url: experience
         category: 'experience'
   - title: CSE
     children:
       - title: 'os'
-        url: os/
+        url: os
         category: 'os'
       - title: 'database'
-        url: database/
+        url: database
         category: 'database'
   - title: Etc
     children:
       - title: 'Book'
-        url: book/
+        url: book
         category: 'book'
       - title: 'Life'
-        url: life/
+        url: life
         category: 'life'
       - title: 'Investment'
-        url: investment/
+        url: investment
         category: 'investment'

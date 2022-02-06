@@ -1,6 +1,6 @@
 ---
 layout: archive
-permalink: /typescript
+permalink: typescript/index.html
 title: "Typescript"
 
 author_profile: true
