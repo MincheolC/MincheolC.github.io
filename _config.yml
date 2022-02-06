@@ -251,8 +251,8 @@ jekyll-archives:
     category: archive-taxonomy
     tag: archive-taxonomy
   permalinks:
-    category: /categories/:name/
-    tag: /tags/:name/
+    category: /:categories/:title/
+    tag: /:tags/:title/
 
 # HTML Compression
 # - https://jch.penibelst.de/
@@ -277,7 +277,6 @@ defaults:
       sidebar:
         nav: categories
   - scope:
-      path: ''
       type: pages
     values:
       author_profile: true
