@@ -1,6 +1,6 @@
 ---
 layout: archive
-permalink: os
+permalink: /os
 title: "Operating System"
 
 author_profile: true
